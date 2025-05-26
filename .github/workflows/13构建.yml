@@ -138,7 +138,10 @@ jobs:
         if: ${{ inputs.enable_feature_y }}
         run: |
          cd kernel_workspace/kernel_platform/common
-         cp ../../SukiSU_patch/other/zram/zram_patch/6.1/lz4k_oplus.patch ./
+         # 验证路径是否存在
+         ls -l ../../../SukiSU_patch/other/zram/zram_patch/6.1/lz4k_oplus.patch
+         # 复制并应用补丁
+         cp ../../../SukiSU_patch/other/zram/zram_patch/6.1/lz4k_oplus.patch ./
          patch -p1 -F 3 < lz4k_oplus.patch || true
            
       - name: Add SUSFS Configuration Settings
