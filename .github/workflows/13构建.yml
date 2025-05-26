@@ -135,11 +135,11 @@ jobs:
           patch -p1 -F 3 < syscall_hooks.patch
 
       - name: Apply lz4kd Patches
-        if: ${{inputs.enable_feature_y }}
+        if: ${{ inputs.enable_feature_y }}
         run: |
-          cd kernel_workspace/kernel_platform/common
-            cp ../../SukiSU_patch/other/zram/zram_patch/6.1/lz4k_oplus.patch ./
-            patch -p1 -F 3 < lz4_oplus.patch || true
+         cd kernel_workspace/kernel_platform/common
+         cp ../../SukiSU_patch/other/zram/zram_patch/6.1/lz4k_oplus.patch ./
+         patch -p1 -F 3 < lz4k_oplus.patch || true
            
       - name: Add SUSFS Configuration Settings
         run: |
