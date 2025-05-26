@@ -1,35 +1,35 @@
-name: 一加13构建 
+name: gt5pro构建 
 on:
   workflow_dispatch:
     inputs:
       CPU:
         description: "分支"
         required: true
-        default: 'sm8750'
+        default: 'sm8650'
       FEIL:
         description: "配置文件"
         required: true
-        default: 'oneplus_13'
+        default: 'gt5pro'
       CPUD:
         description: "处理器代号"
         required: true
-        default: 'sun'
+        default: 'pineapple'
       ANDROID_VERSION:
         description: "内核安卓版本"
         required: true
-        default: 'android15'
+        default: 'android14'
       KERNEL_VERSION:
         description: "内核版本"
         required: true
-        default: '6.6'
+        default: '6.1'
       KERNEL_NAME:
         description: "内核名称修改(中文不行)"
         required: true
-        default: '-android15-8-g013ec21bba94-abogki383916444'
+        default: '-android14-11-o-gc88ee742fca6'
       KERNEL_TIME:
        description: "内核构建日期更改(默认为原厂)"
        required: true
-       default: '2024-12-17 23:36:49 UTC'
+       default: '2025-04-09 15:46:52 UTC'
       enable_feature_x:
        description: "是否启用kpm"
        required: false
